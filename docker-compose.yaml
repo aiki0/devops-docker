@@ -2,7 +2,7 @@ services:
   app:
     image: aikio/express-app:latest
     ports:
-      - "8080:3000"
+      - "8080:8080"
 
   updater:
     image: containrrr/watchtower
@@ -10,3 +10,4 @@ services:
       - /var/run/docker.sock:/var/run/docker.sock
     command: --interval 30
     depends_on:
+      - app
