@@ -23,5 +23,4 @@ jobs:
         with:
           context: .
           push: true
-          # Replace 'your-dockerhub-username' with your actual username
-          tags: your-dockerhub-username/express-app:latest
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/express-app:latest
