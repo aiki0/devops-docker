@@ -1,0 +1,11 @@
+services:
+  app:
+    image: aiki0/express-app:latest
+    ports:
+      - "8080:3000"
+
+  updater:
+    image: containrrr/watchtower
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    command: --interval 30
